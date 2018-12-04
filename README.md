@@ -20,8 +20,13 @@ Build a map-based application, which lets the user see geo-based data on a map a
 
 Fill in (either in English, or in Slovak):
 
-**Application description**: `<fill in>`
+**Application description**:
+App for first responders after a detonation
 
-**Data source**: `<fill in>`
+**Data source**:
+Openstreetmap data
 
-**Technologies used**: `<fill in>`
+**Technologies used**:
+DB Postgresql 10 
+Flask
+Mapbox

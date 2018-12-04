@@ -135,9 +135,9 @@ select st_asgeojson(t_way), leng from affected
     cursor.execute("""
     
         with center as (
-        		SELECT ST_SetSRID(ST_Point(17.13352352272554, 48.15620123577739),4326) pnt
+        		SELECT ST_SetSRID(ST_Point(%s, %s),4326) pnt
         	), radius as(
-        		SELECT ST_Transform(geometry(ST_Buffer(geography(pnt),2500)),4326) rad FROM center	),
+        		SELECT ST_Transform(geometry(ST_Buffer(geography(pnt),%s)),4326) rad FROM center	),
         	affected as (
         		select t_way, st_length(t_way::geography) leng from pipelines
         		cross join radius
