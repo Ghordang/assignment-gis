@@ -11,7 +11,7 @@ The app can be used to identify number of potentially affected buildings, power 
   - Displaying closest nearby unaffected hospitals with names and distances to them
   - Finding affected powerlines and potentially affected building outside of detonation radius
 
-
+![screenshot.jpg](https://github.com/Ghordang/assignment-gis/blob/master/screenshot.jpg "App screenshot")
 
 ### App and technologies:
 The application consists of three different parts:
@@ -47,6 +47,7 @@ CREATE INDEX p_index ON pipelines USING GIST ( t_way );
 
 With not having to do the projection transformation during run, *the time necessary for querying dropped to 1/100*.
 After using the GIST index on transformed "way" column, the time necessary for querying went down by another *1/4*.
+
 
 
 ### Explained sample query:
